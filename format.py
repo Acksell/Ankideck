@@ -53,8 +53,8 @@ with open(OUTPUT_FILE, 'w+', encoding='utf-8') as deck:
         if seen.get(word := getWord(line).lower()):
           print("duplicate", word)
         else:
-          words.append(word.lower())
-          seen[word.lower()]=line
+          words.append(word)
+          seen[word]=line
       else:
         print("Bad input:", line)
     if SORT:
